@@ -9,6 +9,6 @@ Reproducible Software Artifact for paper "Semi-Supervised Classification with Ge
 # Testing
 1. Navigate to the experiment you want to reproduce (ResNet50 or SS-DiffAugment-GAN.)
 2. Modify ``` test.sh ``` for the log you want to perform inference. (After training automatically you must have a file called logs containing the model checkpoint.)
-3. Write ``` bash test.sh ``` to the comman line to test. 
+3. Write ``` bash test.sh ``` to the command line to test. 
 
 Note: There is no need to download a dataset as it is already on the repo. However, you need to specify the path of the dataset images to ``` train.sh ``` and ``` test.sh ``` before training and testing respectively.
