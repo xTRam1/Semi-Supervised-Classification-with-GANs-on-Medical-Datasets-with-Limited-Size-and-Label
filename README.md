@@ -1,6 +1,8 @@
 # Semi-Supervised-Classification-with-Generative-Adversarial-Networks-on-Medical-Datasets
 Reproducible Software Artifact for paper "Semi-Supervised Classification with Generative Adversarial Networks on Medical Datasets with Limited Size and Label" by Erdoğan, 2020.
 
+Note: Due to Github data storage quotas, I had to upload my experiment results as a zip file. So after you clone this repository, make sure to use the command ```unzip experiments.zip``` for both the baseline and the GAN in order to get the saved models, tensorboard logs, sample generated fake images, and fixed z generated images.
+
 ## Custom Training and Reproducing Results
 1. Clone the repository
 2. Navigate to the experiment you want to reproduce (ResNet50 or SS-DiffAugment-GAN.)
