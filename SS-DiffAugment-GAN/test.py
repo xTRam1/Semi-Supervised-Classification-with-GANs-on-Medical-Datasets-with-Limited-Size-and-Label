@@ -40,7 +40,7 @@ def main():
     print(checkpoint1['epoch'] + 1)
     
     dis_net1.load_state_dict(checkpoint1['dis_state_dict'])
-    logger.info(f'=> loaded checkpoint {checkpoint_file1}')
+    logger.info(f'=> loaded checkpoint {args.load_path}')
     
     logger.info(args)
     writer_dict = {
