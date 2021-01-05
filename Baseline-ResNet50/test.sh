@@ -1,1 +1,18 @@
-python test.py --load_path "/content/drive/My Drive/Medical Imaging/ResNet/logs/pretrained/0.5/_2020_08_24_13_19_40" -t_b_s 8 -e_b_s 8 --lr 0.001 --beta1 0.0 --beta2 0.9 --num_workers 4 --img_size 48 --val_freq 20 --print_freq 2 --exp_name 'pretrained' --train_csv_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/training_labels.csv" --train_img_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/small_train" --val_csv_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/val_labels.csv" --val_img_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/small_val" --test_csv_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/test_labels.csv" --test_img_path "/content/drive/My Drive/Medical Imaging/ImprovedGAN-pytorch/Dataset/small_test" --random_seed 1
+python test.py --load_path "path/to/your/checkpoint(saved model)" \
+-t_b_s 8 \
+-e_b_s 8 \
+--lr 0.001 \
+--beta1 0.0 \
+--beta2 0.9 \
+--num_workers 4 \
+--img_size 48 \
+--val_freq 20 \
+--print_freq 2 \
+--exp_name 'name/of/experiment' \
+--train_csv_path "path/to/your/training/dataset/csv/file" \
+--train_img_path "path/to/your/training/images" \
+--val_csv_path "path/to/your/validation/dataset/csv/file" \
+--val_img_path "path/to/your/validation/images" \
+--test_csv_path "path/to/your/testing/dataset/csv/file" \
+--test_img_path "path/to/your/validation/images" \
+--random_seed 1
