@@ -71,9 +71,7 @@ def main():
     if args.load_path:
         print(f'=> resuming from {args.load_path}')
         assert os.path.exists(args.load_path)
-        checkpoint_file = os.path.join(args.load_path, 'Model', 'checkpoint_last.pth')
-        assert os.path.exists(checkpoint_file)
-        checkpoint = torch.load(checkpoint_file)
+        checkpoint = torch.load(args.load_path)
         start_epoch = checkpoint['epoch']
         resnet.load_state_dict(checkpoint['resnet_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
