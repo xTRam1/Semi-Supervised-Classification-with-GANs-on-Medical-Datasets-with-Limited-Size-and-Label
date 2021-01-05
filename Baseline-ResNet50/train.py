@@ -91,7 +91,10 @@ def main():
         'train_global_steps': start_epoch * len(train_loader),
         'valid_global_steps': start_epoch // args.val_freq,
     }
-
+    
+    # train loop
+    # Keeps track of the best performing three checkpoints and saves them as "checkpoint_best1.pth", "checkpoint_best2.pth", and "checkpoint_best3.pth" 
+    # You may use any of the best three for the final testing and eventually for your own project
     start = time.time()
     for epoch in tqdm(range(int(start_epoch), int(args.max_epoch)), desc='total progress'):
         best_curr_acc1, best_curr_acc2, best_curr_acc3 = train(args, resnet, optimizer, criterion, train_loader, val_loader, epoch, writer_dict, best_acc1, best_acc2, best_acc3)
