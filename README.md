@@ -19,9 +19,9 @@ python3 resImprovedGan.py --load_path "experiments/8/0.0002-0.0002/Model/checkpo
 python3 train.py --load_path "experiments/Model/checkpointbest1.pth" ... # Other arguments
 ```
 The path to an experiment result of GAN training is constructed as follows: "experiments/[batch size]/[discriminator learning rate/generator learning rate]/Model/[checkpoint file name (ends with .pth)]"
-5. After or during training you can track your model's performance by using Tensorboard. You will have a ```logs``` folder created for you during training which Tensorboard will use to plot accuracy and learning rate plots for your model. The below command runs tensorboard (assuming you have tensorboard installed in your computer):
+5. After or during training you can track your model's performance by using Tensorboard. You will have a ```logs``` folder created for you during training which Tensorboard will use to plot accuracy and learning rate plots for your model. The below command runs tensorboard:
 ```
-$ tensorboard --logdir logs
+$ tensorboard --logdir logs # Make sure you have Tensorboard installed 
 ```
 
 ## Testing
