@@ -102,6 +102,8 @@ def main():
     }
     
     # train loop
+    # Keeps track of the best performing three checkpoints and saves them as "checkpoint_best1.pth", "checkpoint_best2.pth", and "checkpoint_best3.pth" 
+    # You may use any of the best three for the final testing and eventually for your own project
     val_no = 0
     lr_schedulers = (gen_scheduler, dis_scheduler) if args.lr_decay else None
     start = time.time()
