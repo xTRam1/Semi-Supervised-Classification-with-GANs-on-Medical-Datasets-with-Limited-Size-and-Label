@@ -27,7 +27,7 @@ $ tensorboard --logdir logs # Make sure you have Tensorboard installed
 
 ## Testing
 1. Navigate to the experiment you want to reproduce (ResNet50 or SS-DiffAugment-GAN.)
-2. Modify ``` test.sh ``` for the log you want to perform inference. (After training automatically you must have a file called logs containing the model checkpoint.), and run it.
+2. Modify ``` test.sh ``` for the log you want to perform inference. (After training automatically you must have a file called logs containing the model checkpoint - use the above template to access a single checkpoint in order to test its accuracy), and run it.
 ```sh
 $ git clone https://github.com/xTRam1/Semi-Supervised-Classification-with-GANs-on-Medical-Datasets-with-Limited-Size-and-Label
 $ cd Baseline-ResNet50 or SS-DiffAugment-GAN
