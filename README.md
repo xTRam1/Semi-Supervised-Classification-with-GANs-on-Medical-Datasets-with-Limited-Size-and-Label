@@ -4,13 +4,13 @@ Reproducible Software Artifact for paper "Semi-Supervised Classification with Ge
 ## Custom Training and Reproducing Results
 1. Clone the repository
 2. Navigate to the experiment you want to reproduce (ResNet50 or SS-DiffAugment-GAN.)
-3.1 Modify ``` train.sh ``` for the experiment you want to produce, (Refer to paper for hyperparameters or try new ones.) and run it.
+3. Modify ``` train.sh ``` for the experiment you want to produce, (Refer to paper for hyperparameters or try new ones.) and run it.
 ```sh
 $ git clone https://github.com/xTRam1/Semi-Supervised-Classification-with-GANs-on-Medical-Datasets-with-Limited-Size-and-Label
 $ cd Baseline-ResNet50 or SS-DiffAugment-GAN
 $ bash train.sh  # be sure that you specify the path to your dataset
 ```
-3.2 If you want to perform transfer learning from my results, select a checkpoint from the ```experiments``` folders and pass it as a "--load_path" argument to the shell script. An example is given below:
+4. If you want to perform transfer learning from my results, select a checkpoint from the ```experiments``` folders and pass it as a "--load_path" argument to the shell script. An example is given below:
 ```sh
 # For GAN training
 python3 resImprovedGan.py --load_path "experiments/8/0.0002-0.0002/Model/checkpointbest1.pth" ... # Other arguments 
@@ -19,6 +19,10 @@ python3 resImprovedGan.py --load_path "experiments/8/0.0002-0.0002/Model/checkpo
 python3 train.py --load_path "experiments/Model/checkpointbest1.pth" ... # Other arguments
 ```
 The path to an experiment result of GAN training is constructed as follows: "experiments/[batch size]/[discriminator learning rate/generator learning rate]/Model/[checkpoint file name (ends with .pth)]"
+5. After or during training you can track your model's performance by using Tensorboard. You will have a ```logs``` folder created for you during training which Tensorboard will use to plot accuracy and learning rate plots for your model. The below command runs tensorboard (assuming you have tensorboard installed in your computer):
+```
+$ tensorboard --logdir logs
+```
 
 ## Testing
 1. Navigate to the experiment you want to reproduce (ResNet50 or SS-DiffAugment-GAN.)
