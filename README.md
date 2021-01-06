@@ -1,7 +1,20 @@
 # Semi-Supervised-Classification-with-Generative-Adversarial-Networks-on-Medical-Datasets
 Reproducible Software Artifact for paper "Semi-Supervised Classification with Generative Adversarial Networks on Medical Datasets with Limited Size and Label" by Erdoğan, 2020.
 
-Note: Due to Github data storage quotas, I had to upload my experiment results as a zip file. So after you clone this repository, make sure to use the command ```unzip experiments.zip``` for both the baseline and the GAN in order to get the saved models, tensorboard logs, sample generated fake images, and fixed z generated images.
+Note: Due to Github data storage quotas, I couldn't upload my experiment results. If you want to take my saved models, tensorboard logs, sample generated fake images, and fixed z generated images, for both the baseline and the GAN, please use these commands below to download them to your environment. If not, if you just want to perform custom training, you can skip this part.
+```sh
+$ git clone https://github.com/xTRam1/Semi-Supervised-Classification-with-GANs-on-Medical-Datasets-with-Limited-Size-and-Label
+
+# For the ResNet Baseline
+$ cd Baseline-ResNet50
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1BHvjoytWenLllyTcEmzvCxV-QER2-74M' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1BHvjoytWenLllyTcEmzvCxV-QER2-74M" -O experiments_resnet.zip && rm -rf /tmp/cookies.txt
+$ unzip experiments_resnet.zip && rm -rf experiments_resnet.zip
+
+# For the GAN
+$ cd SS-DiffAugment-GAN
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1GWlzt6xkD8Z4tNY0ioodie26jmeYeV1P' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1GWlzt6xkD8Z4tNY0ioodie26jmeYeV1P" -O experiments_gan.zip && rm -rf /tmp/cookies.txt
+$ unzip experiments_gan.zip && rm -rf experiments_gan.zip
+```
 
 ## Custom Training and Reproducing Results
 1. Clone the repository
