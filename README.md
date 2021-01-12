@@ -23,7 +23,7 @@ $ unzip experiments_gan.zip && rm -rf experiments_gan.zip
 ```sh
 $ git clone https://github.com/xTRam1/Semi-Supervised-Classification-with-GANs-on-Medical-Datasets-with-Limited-Size-and-Label
 $ cd Baseline-ResNet50 or SS-DiffAugment-GAN
-$ bash train.sh  # be sure that you specify the path to your dataset
+$ bash train.sh  # be sure that you specify the path to your dataset in train.sh
 ```
 4. If you want to perform transfer learning from my results, select a checkpoint from the ```experiments``` folders and pass it as a "--load_path" argument to the shell script. An example is given below:
 ```sh
